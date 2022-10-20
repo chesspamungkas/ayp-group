@@ -27,15 +27,6 @@ DB_PASSWORD=ayp-group
 
 Please check the official Lumen installation guide for server requirements before you start. [Official Documentation](https://lumen.laravel.com/docs/5.5/installation)
 
-
-Clone the repository
-
-    git clone git@github.com:elcobvg/lumen-realworld-example-app.git
-
-Switch to the repo folder
-
-    cd lumen-realworld-example-app
-
 Install all the dependencies using composer
 
     composer install
@@ -64,7 +55,7 @@ You can now access the server at http://localhost:8082
     php artisan migrate
     php -S localhost:8082 -t public
 
-***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
+***Note*** : You can refresh your migrations at any point to clean the database by running the following command
 
     php artisan migrate:refresh
 
@@ -105,7 +96,7 @@ pk = primary key
 - `database/migrations` - Contains all the database migrations
 - `routes` - Contains all the api routes defined in web.php file
 - `tests` - Contains all the application tests
-- `tests/Feature/Api` - Contains all the api tests
+- `tests/Feature` - Contains all the api tests
 
 ## Environment variables
 
