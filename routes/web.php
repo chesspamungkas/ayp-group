@@ -13,4 +13,16 @@
 |
 */
 
-$router->get('/', ['uses' => 'Controller@checkDbConnection']);
+$router->get('/', function () use ($router) {
+
+    return $router->app->version();
+
+});
+
+$router->group(['prefix' => 'ayp-api/v1'], function () use ($router) {
+
+    $router->get('/worker', 'WorkerController@index');
+    $router->post('/worker', 'WorkerController@add');
+    $router->post('/employment', 'EmploymentController@add');
+    $router->patch('/employment', 'EmploymentController@update');
+});

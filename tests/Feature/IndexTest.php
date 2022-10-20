@@ -8,7 +8,7 @@ class IndexTest extends TestCase
 {
     public function testHealthCheck()
     {
-        $this->json('GET', '/')->seeJsonEquals([
+        $this->json('GET', '/ayp-api/v1/')->seeJsonEquals([
             "data" => [
                 "dbConnection" => true,
             ]
